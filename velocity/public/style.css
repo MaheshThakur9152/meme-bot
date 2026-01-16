@@ -1,0 +1,26 @@
+*{box-sizing:border-box}
+:root{
+  --bg:#071424;--panel:#091829;--muted:#90a4b6;--accent:#66e3b7;--accent2:#7cc8ff;--glass:rgba(255,255,255,0.02)
+}
+html,body{height:100%}
+body{font-family:Inter,system-ui,Segoe UI,Roboto,Arial;margin:0;background:linear-gradient(180deg,#051124 0%, #071424 100%);color:#e6eef8}
+header{padding:20px 28px;background:linear-gradient(90deg, rgba(6,16,36,0.6), rgba(5,10,20,0.4));border-bottom:1px solid rgba(120,160,200,0.03);display:flex;align-items:center;justify-content:space-between}
+.header-left{display:flex;align-items:center;gap:14px}
+.logo{width:48px;height:48px;border-radius:8px;background:linear-gradient(135deg,var(--accent),var(--accent2));display:flex;align-items:center;justify-content:center;font-weight:700;color:#022;box-shadow:0 6px 18px rgba(10,30,40,0.4)}
+.title{font-size:18px;font-weight:600}
+.subtitle{font-size:12px;color:var(--muted)}
+.controls{display:flex;gap:12px;align-items:center}
+.btn{background:var(--glass);border:1px solid rgba(255,255,255,0.03);padding:8px 12px;border-radius:8px;color:var(--muted);cursor:pointer}
+.btn.primary{background:linear-gradient(90deg,var(--accent),var(--accent2));color:#042;font-weight:700;border:none}
+.container{display:grid;grid-template-columns:260px 1fr 420px;gap:18px;padding:20px}
+.panel{background:var(--panel);border-radius:10px;padding:14px;box-shadow:0 8px 24px rgba(4,20,30,0.4)}
+.system .kv{font-size:13px;color:var(--muted);margin:6px 0}
+.tweets{display:flex;flex-direction:column;gap:8px;max-height:640px;overflow:auto}
+.tweet{padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02)}
+.tweet .meta{font-size:12px;color:var(--muted);display:flex;justify-content:space-between}
+.trade-list{display:flex;flex-direction:column;gap:8px;max-height:640px;overflow:auto}
+.trade{padding:10px;border-radius:8px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.005));border:1px solid rgba(255,255,255,0.02);display:flex;justify-content:space-between}
+.small{font-size:12px;color:var(--muted)}
+.badge{padding:6px 8px;border-radius:999px;background:rgba(255,255,255,0.03);font-weight:600;color:var(--accent)}
+.footer-note{padding:18px;text-align:center;color:var(--muted);font-size:13px}
+`

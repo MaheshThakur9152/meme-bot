@@ -1,0 +1,53 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Velocity — Live Dashboard</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <style>
+      body { font-family: Inter, system-ui, -apple-system, Arial; margin: 0; background:#0b1020; color:#e6eef8 }
+      header{padding:16px;background:#061028;border-bottom:1px solid #173152}
+      .container{display:flex;gap:16px;padding:16px}
+      .panel{background:#071328;border-radius:8px;padding:12px;flex:1;min-height:300px}
+      .tweet{padding:8px;border-bottom:1px solid #0f2a44}
+      .hype{color:#7cf59b}
+      .trade{padding:8px;border-bottom:1px solid #1a3b57;color:#ffd6a5}
+      .small{font-size:12px;color:#9fb1c9}
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="header-left">
+        <div class="logo">V</div>
+        <div>
+          <div class="title">Velocity — Live Dashboard</div>
+          <div class="subtitle">WebSocket real-time feed • Paper trading enabled by default</div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="btn-toggle-auto" class="btn">Auto: OFF</button>
+        <button id="btn-toggle-mode" class="btn">Toggle Mode</button>
+        <button class="btn primary" onclick="window.location.reload()">Refresh</button>
+      </div>
+    </header>
+    <div class="container">
+      <div style="flex:0 0 260px;" class="panel system">
+        <h4>System</h4>
+        <div id="mode">Mode: <strong>paper</strong></div>
+        <div id="stats" class="small" style="margin-top:8px">Loading stats...</div>
+        <div style="margin-top:12px" class="small kv">Controls: Toggle auto-switch or switch mode manually</div>
+      </div>
+      <div class="panel">
+        <h4>Signals</h4>
+        <div id="tweets" class="tweets"></div>
+      </div>
+      <div class="panel">
+        <h4>Trades</h4>
+        <div id="trades" class="trade-list"></div>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/app.js"></script>
+  </body>
+</html>
